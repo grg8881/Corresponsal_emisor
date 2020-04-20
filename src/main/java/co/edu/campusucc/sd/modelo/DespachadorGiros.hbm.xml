@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-abr-2020 13:24:19 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="co.edu.campusucc.sd.modelo.DespachadorGiros" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="despachador_giros">
+        <id name="idDespachadorGiros" type="long">
+            <column name="id_despachador_giros"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="horaRecepGiro" optimistic-lock="true" type="time" unique="false">
+            <column length="15" name="hora_recep_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaRecepGiro" optimistic-lock="true" type="date" unique="false">
+            <column length="13" name="fecha_recep_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="idGiro" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="id_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="comisionGiro" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="comision_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="valorGiro" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="valor_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="idSuRed" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="id_su_red"/>
+        </property>
+        <property generated="never" lazy="false" name="idMatrixGirosYServicios" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_matrix_giros_y_servicios"/>
+        </property>
+        <property generated="never" lazy="false" name="idEfectivoLtda" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_efectivo_ltda"/>
+        </property>
+        <property generated="never" lazy="false" name="idServientrega" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_servientrega"/>
+        </property>
+        <property generated="never" lazy="false" name="idEfecty" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_efecty"/>
+        </property>
+        <property generated="never" lazy="false" name="idSuperGiros" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_super_giros"/>
+        </property>
+        <property generated="never" lazy="false" name="idMovilRed" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_movil_red"/>
+        </property>
+        <property generated="never" lazy="false" name="idInvercosta" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_invercosta"/>
+        </property>
+        <property generated="never" lazy="false" name="idCoopetran" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_coopetran"/>
+        </property>
+        <property generated="never" lazy="false" name="idGirosAlInstanteSin" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_giros_al_instante_sin"/>
+        </property>
+        <property generated="never" lazy="false" name="idBancoAvvillas" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="id_banco_avvillas"/>
+        </property>
+        <property generated="never" lazy="false" name="idDespachador" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="id_despachador"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-abr-2020 13:24:19 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="co.edu.campusucc.sd.modelo.VerificacionMontoPermitido" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="verificacion_monto_permitido">
+        <id name="idVerficarMonto" type="string">
+            <column length="3" name="id_verficar_monto"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="idCliente" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_cliente" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="idGiro" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="idGiros" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="id_giros"/>
+        </property>
+        <property generated="never" lazy="false" name="verficarMontoPermitido" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="verficar_monto_permitido"/>
+        </property>
+        <property generated="never" lazy="false" name="valorMontoPermitido" optimistic-lock="true" type="java.lang.Double" unique="false">
+            <column name="valor_monto_permitido" precision="17" scale="17"/>
+        </property>
+    </class>
+</hibernate-mapping>

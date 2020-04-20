@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-abr-2020 13:24:19 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="co.edu.campusucc.sd.modelo.Giros" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="giros">
+        <id name="idGiros" type="string">
+            <column length="3" name="id_giros"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="co.edu.campusucc.sd.modelo.Empleado" embed-xml="true" fetch="select" insert="true" name="empleado" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="2" name="id_empleado"/>
+        </many-to-one>
+        <many-to-one class="co.edu.campusucc.sd.modelo.FormaPagoEstatica" embed-xml="true" fetch="select" insert="true" name="formaPagoEstatica" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="3" name="id_forma_de_pago"/>
+        </many-to-one>
+        <many-to-one class="co.edu.campusucc.sd.modelo.LocutorioSedeEspana" embed-xml="true" fetch="select" insert="true" name="locutorioSedeEspana" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="3" name="id_locutorio"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="idCliente" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_cliente"/>
+        </property>
+        <property generated="never" lazy="false" name="idOrigen" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_origen"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaGiro" optimistic-lock="true" type="date" unique="false">
+            <column length="13" name="fecha_giro"/>
+        </property>
+        <property generated="never" lazy="false" name="costoGiro" optimistic-lock="true" type="java.lang.Double" unique="false">
+            <column name="costo_giro" precision="17" scale="17"/>
+        </property>
+        <property generated="never" lazy="false" name="idDestino" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_destino"/>
+        </property>
+        <property generated="never" lazy="false" name="idPais" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_pais"/>
+        </property>
+        <property generated="never" lazy="false" name="idAdministrador" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_administrador"/>
+        </property>
+        <property generated="never" lazy="false" name="idVerificarMontoPermitido" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_verificar_monto_permitido"/>
+        </property>
+        <property generated="never" lazy="false" name="idVerficarMonto" optimistic-lock="true" type="string" unique="false">
+            <column length="3" name="id_verficar_monto"/>
+        </property>
+    </class>
+</hibernate-mapping>

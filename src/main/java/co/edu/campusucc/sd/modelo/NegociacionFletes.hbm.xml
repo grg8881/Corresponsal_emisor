@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-abr-2020 13:24:19 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="co.edu.campusucc.sd.modelo.NegociacionFletes" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="negociacion_fletes">
+        <id name="idNegociacion" type="string">
+            <column length="3" name="id_negociacion"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="codNegociacion" optimistic-lock="true" type="big_integer" unique="false">
+            <column name="cod_negociacion" precision="20" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="comiBrokerQueEnvia" optimistic-lock="true" type="big_integer" unique="false">
+            <column name="comi_broker_que_envia" precision="20" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="comiBanco" optimistic-lock="true" type="big_integer" unique="false">
+            <column name="comi_banco" precision="20" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="comiBrokerRecepcion" optimistic-lock="true" type="big_integer" unique="false">
+            <column name="comi_broker_recepcion" precision="131089" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="taxPaisEmisor" optimistic-lock="true" type="big_integer" unique="false">
+            <column name="tax_pais_emisor" precision="131089" scale="0"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaVigenciaInicial" optimistic-lock="true" type="date" unique="false">
+            <column length="13" name="fecha_vigencia_inicial"/>
+        </property>
+        <property generated="never" lazy="false" name="fechaVigenciaFinal" optimistic-lock="true" type="date" unique="false">
+            <column length="13" name="fecha_vigencia_final"/>
+        </property>
+    </class>
+</hibernate-mapping>

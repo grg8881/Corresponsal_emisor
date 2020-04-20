@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 15-abr-2020 13:24:19 by Hibernate Tools 5.4.7.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class dynamic-insert="false" dynamic-update="false" mutable="true" name="co.edu.campusucc.sd.modelo.FormaPagoEstatica" optimistic-lock="version" polymorphism="implicit" schema="public" select-before-update="false" table="forma_pago_estatica">
+        <id name="idFormaDePago" type="string">
+            <column length="3" name="id_forma_de_pago"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="cuentaAhorros" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="cuenta_ahorros"/>
+        </property>
+        <property generated="never" lazy="false" name="tarjetaCredito" optimistic-lock="true" type="java.lang.Long" unique="false">
+            <column name="tarjeta_credito"/>
+        </property>
+        <property generated="never" lazy="false" name="cheque" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="cheque"/>
+        </property>
+        <property generated="never" lazy="false" name="efectivo" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="efectivo"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="giroses" optimistic-lock="true" sort="unsorted" table="giros">
+            <key on-delete="noaction">
+                <column length="3" name="id_forma_de_pago"/>
+            </key>
+            <one-to-many class="co.edu.campusucc.sd.modelo.Giros" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>
